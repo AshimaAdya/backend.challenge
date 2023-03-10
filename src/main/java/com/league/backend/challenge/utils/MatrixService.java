@@ -104,7 +104,7 @@ public class MatrixService {
         return (int) sum; // Cast the sum back to int
     }
     public static int multiply(int[][] matrix) throws ArithmeticException {
-
+        // Used long here in case product value exceeds Integer Limit
         long product = 1;
         for (int[] row : matrix) {
             for (int value : row) {
@@ -116,7 +116,7 @@ public class MatrixService {
         }
         return (int) product;
     }
-    public String matrixToString(int[][] matrix) {
+    public static String matrixToString(int[][] matrix) {
         StringBuilder sb = new StringBuilder();
 
         for (int[] row : matrix) {
